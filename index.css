@@ -449,6 +449,7 @@ h2 {
 .tbadge {
   display: inline-flex;
   align-items: center;
+  white-space: nowrap;
   font-size: 0.7rem;
   font-weight: 700;
   padding: 0.18rem 0.55rem;
