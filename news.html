@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<!-- ════════ 1. NEWS HEADER ════════ -->
+<!-- ════════ NEWS HEADER ════════ -->
 <section class="news-header">
   <div class="container">
     <p class="section-label">Development Log</p>
@@ -11,25 +11,20 @@ layout: default
   </div>
 </section>
 
-<!-- ════════ 2. NEWS LIST (AUTO-GENERATED) ════════ -->
+<!-- ════════ NEWS LIST (AUTO-GENERATED) ════════ -->
 <section class="news-section">
   <div class="container">
     <ul class="news-list">
       {% for post in site.posts %}
         <li class="news-item">
-          <!-- 发布日期 -->
+          <!-- Date -->
           <div class="news-date">{{ post.date | date: "%Y-%m-%d" }}</div>
           
-          <!-- 标题与链接 -->
+          <!-- Content -->
           <div class="news-content">
             <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-            
-            <!-- 摘要 (如果文章有 excerpt_separator，则显示摘要；否则显示前几句) -->
-            {% if post.excerpt %}
-              <p class="news-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-            {% else %}
-              <p class="news-excerpt">{{ post.content | strip_html | truncatewords: 30 }}</p>
-            {% endif %}
+            <!-- Excerpt -->
+            <p class="news-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
           </div>
         </li>
       {% endfor %}
