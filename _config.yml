@@ -1,0 +1,8 @@
+# 告诉 Jekyll 使用 news-folder 作为文章目录
+collections:
+  news:
+    output: true
+    permalink: /news/:name/
+
+# 保持基础配置
+theme: minima
