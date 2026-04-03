@@ -11,23 +11,31 @@ layout: default
   </div>
 </section>
 
-<!-- ════════ NEWS LIST (AUTO-GENERATED) ════════ -->
-<section class="news-section">
+<!-- ════════ NEWS LIST (Card Layout) ════════ -->
+<section id="news" class="news-grid-section">
   <div class="container">
-    <ul class="news-list">
+    <!-- Section Header (模仿 Mission 的 Header 样式) -->
+    <div class="section-header">
+      <p class="section-label reveal">Project Timeline</p>
+      <h2 class="reveal">The Interface is Not a Layer on Top of the System.<br>
+        <em class="quote-em">For the Patient, It Is the System.</em>
+      </h2>
+    </div>
+
+    <!-- News Cards Grid -->
+    <div class="news-grid">
       {% for post in site.posts %}
-        <li class="news-item">
-          <!-- Date -->
-          <div class="news-date">{{ post.date | date: "%Y-%m-%d" }}</div>
-          
-          <!-- Content -->
-          <div class="news-content">
-            <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-            <!-- Excerpt -->
-            <p class="news-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+        <article class="news-card reveal">
+          <!-- Card Icon (模仿 Pillar Icon 的圆底效果) -->
+          <div class="news-card-icon">
+            <i class="fa-solid fa-newspaper"></i>
           </div>
-        </li>
+          <h3>{{ post.title }}</h3>
+          <p class="news-date"><i class="fa-regular fa-calendar"></i> {{ post.date | date: "%Y-%m-%d" }}</p>
+          <p class="news-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+          <a href="{{ post.url | prepend: site.baseurl }}" class="btn-readmore">Read Full Update</a>
+        </article>
       {% endfor %}
-    </ul>
+    </div>
   </div>
 </section>
