@@ -1,0 +1,7 @@
+title: 我的个人新闻站
+description: 这是一个基于 Jekyll 的静态网站
+theme: minima
+
+# 这里的设置是为了让 jekyll-admin 生效
+plugins:
+  - jekyll-admin
