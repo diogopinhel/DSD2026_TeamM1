@@ -28,8 +28,8 @@
     <!-- ════════ MAIN CONTENT (This will be replaced by news.html) ════ -->
     <!-- 检查是否是文章页面，如果是，则应用特定样式 -->
     {% if page.layout == "post" or page.title %}
-    <div class="container" style="padding-top: 100px;">
-      <a href="/DSD2026_TeamM1/news.html" class="btn-readmore" style="margin-bottom: 2rem;"><i class="fa-solid fa-arrow-left"></i> Back</a>
+    <div class="container" style="padding-top: 100 px;">
+      <a href="/DSD2026_TeamM1/news.html" class="btn-readmore" style="margin-bottom: 2 rem;"><i class="fa-solid fa-arrow-left"></i> Back</a>
       
       <article class="news-card">
         <div class="news-card-icon"><i class="fa-solid fa-newspaper"></i></div>
@@ -40,7 +40,7 @@
     </div>
     {% else %}
     {{ content }}
-
+    {% endif %}
     <!-- ════════ FOOTER (Copied from index.html) ════════ -->
     <footer>
         <div class="footer-left">DSD2026 · Team M1 · UTAD × Jilin University</div>
