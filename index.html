@@ -396,7 +396,7 @@ layout: default
     <div class="section-header">
       <p class="section-label reveal">News</p>
       <h2 class="reveal">Updates & Announcements<br>
-        <em class="quote-em">Latest news and progress from Team M1</em>
+        <em class="quote-em">Latest news from Team M1</em>
       </h2>
     </div>
 
@@ -415,7 +415,7 @@ layout: default
           <!-- Excerpt -->
           <p class="news-excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
           <!-- Link -->
-          <a href="{{ post.url | prepend: site.baseurl }}" class="btn-readmore">Read Full Update</a>
+          <a href="{{ post.url | prepend: site.baseurl }}" class="btn-readmore">Read Full News</a>
         </article>
       {% endfor %}
     </div>
