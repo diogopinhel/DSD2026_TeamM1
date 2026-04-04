@@ -385,16 +385,35 @@
     </div>
   </div>
 </section>
-<!-- ════════ 7. NEWS ENTRY POINT ════════════════════════════ -->
-<section id="news">
+
+
+  <!-- ════════ NEWS LIST (Card Layout) ════════ -->
+<section id="news" class="news-grid-section">
   <div class="container">
-    <a href="news.html" style="text-decoration: none; color: inherit;">
-      <p class="section-label reveal">News & Updates</p>
-      <h2 class="reveal">Project Development Log</h2>
-    </a>
-    <p class="section-intro reveal">
-      Track our progress, version releases, and key milestones.
-    </p>
+    <!-- Section Header (Mission Style) -->
+    <div class="section-header">
+      <a href="news.html" style="text-decoration: none; color: inherit;">
+      <p class="section-label reveal">Project Timeline</p>
+      </a>
+      <h2 class="reveal">The Interface is Not a Layer on Top of the System.<br>
+        <em class="quote-em">For the Patient, It Is the System.</em>
+      </h2>
+    </div>
+
+    <!-- News Cards Grid -->
+    <div class="news-grid">
+      {% for post in site.posts %}
+        <article class="news-card reveal">
+          <div class="news-card-icon">
+            <i class="fa-solid fa-newspaper"></i>
+          </div>
+          <h3>{{ post.title }}</h3>
+          <p class="news-date"><i class="fa-regular fa-calendar"></i> {{ post.date | date: "%Y-%m-%d" }}</p>
+          <p class="news-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+          <a href="{{ post.url | prepend: site.baseurl }}" class="btn-readmore">Read Full Update</a>
+        </article>
+      {% endfor %}
+    </div>
   </div>
 </section>
 <!-- ════════ FOOTER ══════════════════════════════════════════ -->
