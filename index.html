@@ -386,36 +386,45 @@
   </div>
 </section>
 
+    <!-- ════════ NEWS SECTION (Identical to news.html) ════════ -->
+    <section id="news">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <p class="section-label reveal">Project Timeline</p>
+          <h2 class="reveal">The Interface is Not a Layer on Top of the System.<br>
+            <em class="quote-em">For the Patient, It Is the System.</em>
+          </h2>
+        </div>
 
-  <!-- ════════ NEWS LIST (Card Layout) ════════ -->
-<section id="news" class="news-grid-section">
-  <div class="container">
-    <!-- Section Header (Mission Style) -->
-    <div class="section-header">
-      <a href="news.html" style="text-decoration: none; color: inherit;">
-      <p class="section-label reveal">Project Timeline</p>
-      </a>
-      <h2 class="reveal">The Interface is Not a Layer on Top of the System.<br>
-        <em class="quote-em">For the Patient, It Is the System.</em>
-      </h2>
-    </div>
-
-    <!-- News Cards Grid -->
-    <div class="news-grid">
-      {% for post in site.posts %}
-        <article class="news-card reveal">
-          <div class="news-card-icon">
-            <i class="fa-solid fa-newspaper"></i>
-          </div>
-          <h3>{{ post.title }}</h3>
-          <p class="news-date"><i class="fa-regular fa-calendar"></i> {{ post.date | date: "%Y-%m-%d" }}</p>
-          <p class="news-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-          <a href="{{ post.url | prepend: site.baseurl }}" class="btn-readmore">Read Full Update</a>
-        </article>
-      {% endfor %}
-    </div>
-  </div>
-</section>
+        <!-- News Cards Grid -->
+        <div class="news-grid">
+          <!-- 循环显示最新的 3 篇文章，如需显示更多请修改 limit 数字 -->
+          {% for post in site.posts limit: 3 %}
+            <article class="news-card reveal">
+              <!-- Card Icon -->
+              <div class="news-card-icon">
+                <i class="fa-solid fa-newspaper"></i>
+              </div>
+              <!-- Title -->
+              <h3>{{ post.title }}</h3>
+              <!-- Date -->
+              <p class="news-date"><i class="fa-regular fa-calendar"></i> {{ post.date | date: "%Y-%m-%d" }}</p>
+              <!-- Excerpt -->
+              <p class="news-excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+              <!-- Link -->
+              <a href="{{ post.url | prepend: site.baseurl }}" class="btn-readmore">Read Full Update</a>
+            </article>
+          {% endfor %}
+        </div>
+        
+        <!-- View All Button (Optional) -->
+        <div style="text-align: center; margin-top: 3rem;">
+          <a href="{{ site.baseurl }}/news.html" class="btn-readmore" style="font-size: 1.1rem;">View All Updates →</a>
+        </div>
+      </div>
+    </section>
+  
 <!-- ════════ FOOTER ══════════════════════════════════════════ -->
 <footer>
   <div class="footer-left">DSD2026 · Team M1 · UTAD × Jilin University</div>
