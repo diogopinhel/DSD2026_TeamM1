@@ -871,6 +871,10 @@ footer {
     position: relative;
     overflow: hidden;
     color: #cbd5e1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
 }
 .news-card:hover {
     transform: translateY(-5px);
@@ -893,7 +897,11 @@ footer {
 .news-card-icon i {
     font-size: 1.5rem;
 }
-
+.btn-readmore {
+    margin-top: auto;
+    align-self: flex-start;
+    margin-top: 1rem;
+}
 /* 6. Card Text Content */
 .news-card h3 {
     font-family: 'Inter', sans-serif;
