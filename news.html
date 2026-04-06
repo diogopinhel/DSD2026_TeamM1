@@ -1,0 +1,74 @@
+---
+layout: default
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>News · DSD2026 · Team M1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="{{ site.baseurl }}/style.css" />
+</head>
+<body>
+
+<!-- ════════ NAVBAR ════ -->
+<nav>
+  <div class="nav-logo">DSD2026 · <span>Team M1</span></div>
+  <ul class="nav-links">
+    <li><a href="{{ site.baseurl }}/#project">Project</a></li>
+    <li><a href="{{ site.baseurl }}/#architecture">Architecture</a></li>
+    <li><a href="{{ site.baseurl }}/#mission">Mission</a></li>
+    <li><a href="{{ site.baseurl }}/#team">Team</a></li>
+    <li><a href="{{ site.baseurl }}/#responsibilities">Responsibilities</a></li>
+    <li><a href="{{ site.baseurl }}/#workflow">Workflow</a></li>
+    <li><a href="{{ site.baseurl }}/#news" class="active">News</a></li>
+  </ul>
+</nav>
+
+<!-- ════════ NEWS SECTION (保持原有功能不变) ════════ -->
+<section id="news">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="section-header">
+      <p class="section-label reveal">News</p>
+      <h2 class="reveal">Updates & Announcements<br>
+        <em class="quote-em">Latest news from Team M1</em>
+      </h2>
+    </div>
+
+    <!-- News Cards Grid -->
+    <div class="news-grid">
+      {% for post in site.posts %}
+        <article class="news-card reveal">
+          <!-- Card Icon -->
+          <div class="news-card-icon">
+            <i class="fa-solid fa-newspaper"></i>
+          </div>
+          <!-- Title -->
+          <h3>{{ post.title }}</h3>
+          <!-- Date -->
+          <p class="news-date"><i class="fa-regular fa-calendar"></i> {{ post.date | date: "%Y-%m-%d" }}</p>
+          <!-- Excerpt -->
+          <p class="news-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+          <!-- Link -->
+          <a href="{{ post.url | prepend: site.baseurl }}" class="btn-readmore">Read Full News</a>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- ════════ SCROLL PROGRESS BUTTON ════════════════ -->
+<button id="scroll-btn" aria-label="Back to top">
+  <svg viewBox="0 0 44 44" width="44" height="44" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="22" cy="22" r="20" class="sbg"/>
+    <circle cx="22" cy="22" r="19" class="strack"/>
+    <circle cx="22" cy="22" r="19" class="sring" id="sring"/>
+    <polyline points="15,25 22,17 29,25" class="sarrow"/>
+  </svg>
+</button>
+<script src="{{ site.baseurl }}/transitions.js"></script>
+</body>
+</html>

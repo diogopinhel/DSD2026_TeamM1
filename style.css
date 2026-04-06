@@ -762,3 +762,193 @@ footer {
   from { opacity: 0; transform: translateY(16px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+
+
+/* === NEWS PAGE STYLES === */
+.news-header {
+    padding: 4rem 0 2rem;
+    text-align: center;
+    border-bottom: 1px solid #e5e7eb;
+}
+.news-header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    background: linear-gradient(90deg, #000, #1f2937);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.news-header p {
+    color: #6b7280;
+    max-width: 600px;
+    margin: 1rem auto;
+}
+
+.news-list {
+    list-style: none;
+    padding: 0;
+    margin: 4rem 0;
+}
+.news-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+.news-date {
+    font-family: 'Inter', monospace;
+    font-size: 0.85rem;
+    color: #6b7280;
+    min-width: 100px;
+    padding-top: 0.5rem;
+}
+.news-content h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.news-content h3 a {
+    color: #1f2937;
+    text-decoration: none;
+}
+.news-content h3 a:hover {
+    color: var(--cyan);
+}
+.news-excerpt {
+    color: #6b7280;
+    margin: 0;
+}
+
+
+/* ════════ NEWS STYLES (Copied from MISSION/PILLAR Styling) ════════ */
+
+/* 1. Section Container (匹配 Mission 的背景和间距) */
+#news {
+    padding: 100px 0;
+    background: var(--bg2);
+    color: #e2e8f0;
+}
+
+/* 2. Section Header (匹配 Mission 的标题样式) */
+.section-header .section-label {
+    color: var(--cyan);
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 1rem;
+}
+
+.section-header h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    color: #f8fafc;
+    max-width: 700px;
+}
+
+.section-header h2 .quote-em {
+    color: var(--cyan);
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* 3. News Grid Layout (匹配 Mission 的 3列 响应式布局) */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+/* 4. News Card (核心样式：模仿 .pillar / .resp-card) */
+.news-card {
+    background: #1e293b; /* 深灰卡片背景 */
+    border-radius: 12px;
+    padding: 2rem;
+    border: 1px solid #334155;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    color: #cbd5e1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content:flex-start;
+}
+.news-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--cyan);
+    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.15);
+}
+.news-card-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--cyan-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+.news-card-icon i {
+    font-size: 1.5rem;
+}
+.btn-readmore {
+    margin-top: 1rem;
+    align-self: flex-start;
+    margin-top: auto;
+}
+/* 6. Card Text Content */
+.news-card h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #f8fafc;
+    margin-bottom: 0.5rem;
+}
+
+.news-date {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #94a3b8;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.news-excerpt {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* 7. Read More Button (模仿项目中的按钮风格) */
+.btn-readmore {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--cyan);
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.btn-readmore:hover {
+    color: #f8fafc;
+    gap: 0.75rem;
+}
+
+.btn-readmore::after {
+    content: "→";
+    font-weight: 800;
+}

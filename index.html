@@ -1,3 +1,6 @@
+---
+layout: default
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,6 +24,7 @@
     <li><a href="#team">Team</a></li>
     <li><a href="#responsibilities">Responsibilities</a></li>
     <li><a href="#workflow">Workflow</a></li>
+    <li><a href="#news">News</a></li>
   </ul>
 </nav>
 
@@ -385,28 +389,43 @@
   </div>
 </section>
 
-<!-- ════════ FOOTER ══════════════════════════════════════════ -->
-<footer>
-  <div class="footer-left">DSD2026 · Team M1 · UTAD × Jilin University</div>
-  <div class="footer-right">
-    <ul class="footer-links">
-      <li><a href="#project">Project</a></li>
-      <li><a href="#architecture">Architecture</a></li>
-      <li><a href="#mission">Mission</a></li>
-      <li><a href="#team">Team</a></li>
-      <li><a href="#responsibilities">Responsibilities</a></li>
-      <li><a href="#workflow">Workflow</a></li>
-    </ul>
-    <div class="footer-icons">
-      <a href="https://github.com/diogopinhel/DSD2026_TeamM1" aria-label="GitHub">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-      </a>
-      <a href="mailto:d.pinhel19@gmail.com" aria-label="Email">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-      </a>
+<!-- ════════ NEWS SECTION (Identical to news.html) ════════ -->
+<section id="news">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="section-header">
+      <p class="section-label reveal">News</p>
+      <h2 class="reveal">Updates & Announcements<br>
+        <em class="quote-em">Latest news from Team M1</em>
+      </h2>
+    </div>
+
+    <!-- News Cards Grid -->
+    <div class="news-grid">
+      {% for post in site.posts limit: 3 %}
+        <article class="news-card reveal">
+          <!-- Card Icon -->
+          <div class="news-card-icon">
+            <i class="fa-solid fa-newspaper"></i>
+          </div>
+          <!-- Title -->
+          <h3>{{ post.title }}</h3>
+          <!-- Date -->
+          <p class="news-date"><i class="fa-regular fa-calendar"></i> {{ post.date | date: "%Y-%m-%d" }}</p>
+          <!-- Excerpt -->
+          <p class="news-excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+          <!-- Link -->
+          <a href="{{ post.url | prepend: site.baseurl }}" class="btn-readmore">Read Full News</a>
+        </article>
+      {% endfor %}
+    </div>
+    
+    <!-- View All Button (Optional) -->
+    <div style="text-align: center; margin-top: 3rem;">
+      <a href="{{ site.baseurl }}/news.html" class="btn-readmore" style="font-size: 1.1rem;">View All News</a>
     </div>
   </div>
-</footer>
+</section>
 
 <!-- ════════ SCROLL PROGRESS BUTTON ════════════════ -->
 <button id="scroll-btn" aria-label="Back to top">
@@ -417,7 +436,6 @@
     <polyline points="15,25 22,17 29,25" class="sarrow"/>
   </svg>
 </button>
-
 <script src="transitions.js"></script>
 </body>
 </html>
