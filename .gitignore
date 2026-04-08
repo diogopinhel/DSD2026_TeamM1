@@ -1,0 +1,21 @@
+# Jekyll build output
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Bundler
+.bundle/
+vendor/bundle/
+
+# Logs and temp files
+*.log
+*.tmp
+
+# Editor/OS junk
+.DS_Store
+Thumbs.db
+
+# Ruby history
+.byebug_history
+.irb_history
