@@ -50,7 +50,7 @@ layout: default
           <!-- Title -->
           <h3>{{ post.title }}</h3>
           <!-- Date -->
-          <p class="news-date"><i class="fa-regular fa-calendar"></i> {{ post.date | date: "%Y-%m-%d" }}</p>
+          <p class="news-date"><i class="fa-regular fa-calendar"></i> {{ post.date | date: "%Y-%m-%d %H:%M" }}</p>
           <!-- Excerpt -->
           <p class="news-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
           <!-- Link -->
