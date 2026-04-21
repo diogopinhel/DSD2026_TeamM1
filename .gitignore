@@ -19,3 +19,7 @@ Thumbs.db
 # Ruby history
 .byebug_history
 .irb_history
+
+#Igonre other files
+CLAUDE.md
+settings.json
