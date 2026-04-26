@@ -336,17 +336,6 @@ excerpt: ""
 </div>
 
 <hr class="section-divider">
-
-# M1 Interface Specification
-
-**Team M1 — Patient Mobile Application**
-
-DSD 2025–2026 · UTAD × Jilin University
-
-Date: April 25, 2026
-
-Author: Enhe Zhang
-
 ---
 
 ## 1. Overview
