@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Interface_Specification—M1"
-date: 2026-04-25 9:00:00
+date: 2026-04-26 6:00:00
 excerpt: ""
 ---
 
