@@ -220,7 +220,7 @@ Project: Rehabilitation Exercise Monitoring System
 
 ## 1. Task List (Attachment)
 
-[Download Link]()
+[Link](https://diogopinhel.github.io/DSD2026_TeamM1/doc/Wang/weekly_tasks_w1_EN.docx)
 
 ---
 
