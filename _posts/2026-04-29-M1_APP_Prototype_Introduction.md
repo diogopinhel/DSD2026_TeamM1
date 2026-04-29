@@ -320,7 +320,7 @@ The following flow is organized based on the video demonstration:
 9. Taps "Scan for Sensors" → begins scanning nearby BLE devices
 ```
 
-<video src="https://tnxmy.github.io/DSD2026_TeamM1/img/1.mp4" controls width="100%" style="max-width: 600px; border-radius: 8px;"></video>
+<video src="https://diogopinhel.github.io/DSD2026_TeamM1/doc/Zhang/Prototype_Introduction_v0.2.mp4" controls width="100%" style="max-width: 600px; border-radius: 8px;"></video>
 
 
 ---
