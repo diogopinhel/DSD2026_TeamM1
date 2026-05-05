@@ -314,21 +314,6 @@ excerpt: "This document defines the interface specifications for all data exchan
   tbody tr:last-child td:last-child  { border-bottom-right-radius: 11px; }
 </style>
 
-<!-- ═══════════════════════════════════════════════════════════
-     DOCUMENT HEADER
-═══════════════════════════════════════════════════════════ -->
-
-<div class="doc-header">
-  <div class="doc-header-tag">Interface Specification</div>
-  <h1><span>M1</span> Interface Specification</h1>
-  <div class="doc-header-meta">
-    <span class="meta-chip"><strong>Team:</strong> M1 — Patient Mobile Application</span>
-    <span class="meta-chip"><strong>Programme:</strong> DSD 2025–2026</span>
-    <span class="meta-chip"><strong>Partners:</strong> UTAD × Jilin University</span>
-    <span class="meta-chip"><strong>Date:</strong> May 05, 2026</span>
-  </div>
-</div>
-
 ## 1. Document Overview
 
 <div class="m1-card" style="margin-bottom:2rem;">
