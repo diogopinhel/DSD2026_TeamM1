@@ -45,15 +45,31 @@
                     <i class="fa-solid" style="margin-right: 0.5rem;"></i> Back to News
                 </a>
                 
+                {% assign post_icon = "fa-newspaper" %}
+                {% if page.doc_type == "Weekly Report" %}{% assign post_icon = "fa-chart-bar" %}
+                {% elsif page.doc_type == "Specification" %}{% assign post_icon = "fa-file-code" %}
+                {% elsif page.doc_type == "Requirements" %}{% assign post_icon = "fa-list-check" %}
+                {% elsif page.doc_type == "Design" %}{% assign post_icon = "fa-pen-ruler" %}
+                {% elsif page.doc_type == "Prototype" %}{% assign post_icon = "fa-mobile-screen" %}
+                {% elsif page.doc_type == "Announcement" %}{% assign post_icon = "fa-bullhorn" %}
+                {% endif %}
                 <article class="news-card" style="margin-top: 1rem;">
+                    {% if page.status == "current" %}
+                      <span class="status-badge badge-current">Atual</span>
+                    {% elsif page.status == "outdated" %}
+                      <span class="status-badge badge-outdated">Desatualizado</span>
+                    {% endif %}
                     <div class="news-card-icon">
-                        <i class="fa-solid fa-newspaper"></i>
+                        <i class="fa-solid {{ post_icon }}"></i>
                     </div>
                     <h1 style="font-size: clamp(1.8rem, 4vw, 2.4rem); margin-bottom: 0.5rem;">{{ page.title }}</h1>
-                    <p class="news-date" style="margin-bottom: 2rem;">
+                    <p class="news-date">
                         <i class="fa-regular fa-calendar"></i> {{ page.date | date: "%Y-%m-%d" }}
                     </p>
-                    <div class="post-content" style="line-height: 1.8; color: var(--text);">
+                    {% if page.doc_type %}
+                      <span class="doc-type-tag" style="margin-bottom: 2rem; display: inline-flex;"><i class="fa-solid fa-tag"></i> {{ page.doc_type }}</span>
+                    {% endif %}
+                    <div class="post-content" style="line-height: 1.8; color: var(--text); margin-top: 1.5rem;">
                         {{ content }}
                     </div>
                 </article>

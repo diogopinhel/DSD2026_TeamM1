@@ -2,6 +2,8 @@
 layout: post
 title: "HarmonyOS UI Development Weekly"
 date: 2026-04-21 13:59:00
+doc_type: Weekly Report
+status: current
 ---
 
 

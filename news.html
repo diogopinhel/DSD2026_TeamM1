@@ -31,26 +31,63 @@ layout: default
 <!-- ════════ NEWS SECTION (保持原有功能不变) ════════ -->
 <section id="news">
   <div class="container">
-    <!-- Section Header -->
-    <div class="section-header">
-      <p class="section-label reveal">News</p>
-      <h2 class="reveal">Updates & Announcements<br>
-        <em class="quote-em">Latest news from Team M1</em>
-      </h2>
+    <!-- Section Header + Filters -->
+    <div class="news-controls">
+      <div class="section-header">
+        <p class="section-label reveal">News</p>
+        <h2 class="reveal">Updates & Announcements<br>
+          <em class="quote-em">Latest news from Team M1</em>
+        </h2>
+      </div>
+      <div class="news-filters">
+        <select class="filter-select" id="filter-type" aria-label="Filter by type">
+          <option value="">All Types</option>
+          <option value="Announcement">Announcement</option>
+          <option value="Design">Design</option>
+          <option value="Prototype">Prototype</option>
+          <option value="Requirements">Requirements</option>
+          <option value="Specification">Specification</option>
+          <option value="Weekly Report">Weekly Report</option>
+        </select>
+        <select class="filter-select" id="filter-status" aria-label="Filter by status">
+          <option value="">All Status</option>
+          <option value="current">Atual</option>
+          <option value="outdated">Desatualizado</option>
+        </select>
+      </div>
     </div>
 
     <!-- News Cards Grid -->
-    <div class="news-grid">
+    <div class="news-grid" id="news-grid">
       {% for post in site.posts %}
-        <article class="news-card reveal">
+        {% assign card_icon = "fa-newspaper" %}
+        {% if post.doc_type == "Weekly Report" %}{% assign card_icon = "fa-chart-bar" %}
+        {% elsif post.doc_type == "Specification" %}{% assign card_icon = "fa-file-code" %}
+        {% elsif post.doc_type == "Requirements" %}{% assign card_icon = "fa-list-check" %}
+        {% elsif post.doc_type == "Design" %}{% assign card_icon = "fa-pen-ruler" %}
+        {% elsif post.doc_type == "Prototype" %}{% assign card_icon = "fa-mobile-screen" %}
+        {% elsif post.doc_type == "Announcement" %}{% assign card_icon = "fa-bullhorn" %}
+        {% endif %}
+        <article class="news-card reveal"
+          data-type="{{ post.doc_type }}"
+          data-status="{{ post.status }}">
+          <!-- Status badge -->
+          {% if post.status == "current" %}
+            <span class="status-badge badge-current">Atual</span>
+          {% elsif post.status == "outdated" %}
+            <span class="status-badge badge-outdated">Desatualizado</span>
+          {% endif %}
           <!-- Card Icon -->
           <div class="news-card-icon">
-            <i class="fa-solid fa-newspaper"></i>
+            <i class="fa-solid {{ card_icon }}"></i>
           </div>
           <!-- Title -->
           <h3>{{ post.title }}</h3>
-          <!-- Date -->
+          <!-- Date + Doc Type -->
           <p class="news-date"><i class="fa-regular fa-calendar"></i> {{ post.date | date: "%Y-%m-%d %H:%M" }}</p>
+          {% if post.doc_type %}
+            <span class="doc-type-tag"><i class="fa-solid fa-tag"></i> {{ post.doc_type }}</span>
+          {% endif %}
           <!-- Excerpt -->
           <p class="news-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
           <!-- Link -->
@@ -58,6 +95,25 @@ layout: default
         </article>
       {% endfor %}
     </div>
+
+    <script>
+    (function () {
+      var typeSelect = document.getElementById('filter-type');
+      var statusSelect = document.getElementById('filter-status');
+      var cards = document.querySelectorAll('#news-grid .news-card');
+      function applyFilters() {
+        var typeVal = typeSelect.value;
+        var statusVal = statusSelect.value;
+        cards.forEach(function (card) {
+          var typeMatch = !typeVal || card.dataset.type === typeVal;
+          var statusMatch = !statusVal || card.dataset.status === statusVal;
+          card.style.display = (typeMatch && statusMatch) ? '' : 'none';
+        });
+      }
+      typeSelect.addEventListener('change', applyFilters);
+      statusSelect.addEventListener('change', applyFilters);
+    })();
+    </script>
   </div>
 </section>
 <!-- ════════ SCROLL PROGRESS BUTTON ════════════════ -->

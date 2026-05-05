@@ -2,6 +2,8 @@
 layout: post
 title:  "Markdown Test"
 date:   2026-04-03 16:00:00
+doc_type: Announcement
+status: outdated
 ---
 
 

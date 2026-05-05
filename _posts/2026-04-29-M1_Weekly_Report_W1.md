@@ -3,6 +3,8 @@ layout: post
 title: "M1 Weekly Report W1"
 date: 2026-04-29 8:00:00
 excerpt: ""
+doc_type: Weekly Report
+status: current
 ---
 
 

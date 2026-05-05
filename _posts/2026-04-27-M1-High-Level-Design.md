@@ -3,6 +3,8 @@ layout: post
 title: "High-Level Design — M1 Patient Mobile Application"
 date: 2026-04-27 14:00:00
 excerpt: "High-Level Design document for Team M1. Defines the Data Flow Diagram and internal module overview aligned with the S2 DFD reference and all cross-team interfaces."
+doc_type: Design
+status: outdated
 ---
 
 <style>

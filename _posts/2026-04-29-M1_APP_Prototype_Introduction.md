@@ -3,6 +3,8 @@ layout: post
 title: "M1 APP Prototype Introduction v0.2"
 date: 2026-04-29 7:00:00
 excerpt: ""
+doc_type: Prototype
+status: current
 ---
 
 <style>
