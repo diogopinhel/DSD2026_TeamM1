@@ -329,7 +329,7 @@ excerpt: "This document defines the interface specifications for all data exchan
   </div>
 </div>
 
-<span class="section-label">1. Document Overview</span>
+## 1. Document Overview
 
 <div class="m1-card" style="margin-bottom:2rem;">
 This document defines the interface specifications for all data exchanges that cross the M1 module boundary. M1 is the Patient Mobile Application responsible for user interaction, session management, real-time feedback display, and data synchronization with the backend.
