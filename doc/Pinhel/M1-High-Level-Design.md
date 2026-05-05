@@ -1,10 +1,3 @@
----
-layout: post
-title: "High-Level Design — M1 Patient Mobile Application"
-date: 2026-05-05 18:00:00
-excerpt: "High-Level Design document for Team M1. Defines the Data Flow Diagram and internal module overview aligned with the S2 DFD reference and all cross-team interfaces."
----
-
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 
@@ -149,11 +142,11 @@ excerpt: "High-Level Design document for Team M1. Defines the Data Flow Diagram 
   .info-block.warn  { border-left-color: var(--amber); }
   .info-block strong { color: var(--text); }
 
-  .dfd-container {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 16px; padding: 1.5rem; margin: 1.5rem 0;
-    text-align: center;
-  }
+ .dfd-container {
+  background: #19191a; border: 1px solid var(--border);
+  border-radius: 16px; padding: 1.5rem; margin: 1.5rem 0;
+  text-align: center;
+}
   .dfd-container img {
     max-width: 100%; border-radius: 8px;
   }
@@ -228,7 +221,7 @@ excerpt: "High-Level Design document for Team M1. Defines the Data Flow Diagram 
     <span class="meta-chip"><strong>Status:</strong> <span class="badge badge-green">Published for Review</span></span>
   </div>
   <div style="margin-top:1.5rem; text-align:center;">
-    <a class="download-btn" href="{{ '/doc/download/2026-05-05-M1-High-Level-Design.md' | relative_url }}" download="2026-05-05-M1-High-Level-Design.md">
+    <a class="download-btn" href="{{ '/doc/Pinhel/M1-High-Level-Design.md' | relative_url }}" download="2026-05-05-M1-High-Level-Design.md">
       <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
       Download Markdown
     </a>
@@ -309,17 +302,31 @@ M1 sits at the end of the data pipeline and is the only team that interacts with
 </div>
 
 <div class="dfd-container">
-  <img src="{{ '/img/diagrams/External_DFD.svg' | relative_url }}" alt="M1 Data Flow Diagram — Level 0 and Level 1" style="width:100%; border-radius:8px;" />
+  <img src="{{ '/img/diagrams/external_DFD.svg' | relative_url }}" alt="M1 Data Flow Diagram — Level 0" style="width:100%; border-radius:8px;" />
   <div style="margin-top:0.75rem; font-size:0.72rem; color:var(--text-xs); letter-spacing:0.04em;">
     Figure 1 — M1 AppFrontend · Level 0 System DFD · April 2026
   </div>
 </div>
 
+<div style="text-align:center; margin: 0.75rem 0 1.5rem;">
+  <a class="download-btn" href="{{ '/img/diagrams/external_DFD.svg' | relative_url }}" download="external_DFD.svg">
+    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    Download Level 0 Diagram
+  </a>
+</div>
+
 <div class="dfd-container">
-  <img src="{{ '/img/diagrams/m1_internal_DFD_V1.1' | relative_url }}" alt="M1 Data Flow Diagram — Level 0 and Level 1" style="width:100%; border-radius:8px;" />
+  <img src="{{ '/img/diagrams/m1_internal_DFD_V1.1.svg' | relative_url }}" alt="M1 Data Flow Diagram — Level 1" style="width:100%; border-radius:8px;" />
   <div style="margin-top:0.75rem; font-size:0.72rem; color:var(--text-xs); letter-spacing:0.04em;">
     Figure 2 — M1 AppFrontend · Level 1 Internal DFD · April 2026
   </div>
+</div>
+
+<div style="text-align:center; margin: 0.75rem 0 1.5rem;">
+  <a class="download-btn" href="{{ '/img/diagrams/m1_internal_DFD_V1.1.svg' | relative_url }}" download="m1_internal_DFD_V1.1.svg">
+    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    Download Level 1 Diagram
+  </a>
 </div>
 
 ### 2.1 Module Legend
