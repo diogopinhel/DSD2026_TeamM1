@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "High-Level Design — M1 Patient Mobile Application"
-date: 2026-05-05 18:00:00
+date: 2026-05-06 12:00:00
 excerpt: "High-Level Design document for Team M1. Defines the Data Flow Diagram and internal module overview aligned with the S2 DFD reference and all cross-team interfaces."
 doc_type: Design
 status: current
@@ -225,8 +225,8 @@ status: current
     <span class="meta-chip"><strong>Project:</strong> Limb Motion Recognition and Assistant</span>
     <span class="meta-chip"><strong>Team:</strong> M1 — Patient Mobile App</span>
     <span class="meta-chip"><strong>Layer:</strong> Monitor</span>
-    <span class="meta-chip"><strong>Version:</strong> v1.2</span>
-    <span class="meta-chip"><strong>Date:</strong> May 5, 2026</span>
+    <span class="meta-chip"><strong>Version:</strong> v1.3</span>
+    <span class="meta-chip"><strong>Date:</strong> May 6, 2026</span>
     <span class="meta-chip"><strong>Status:</strong> <span class="badge badge-green">Published for Review</span></span>
   </div>
   <div style="margin-top:1.5rem; text-align:center;">
@@ -264,6 +264,13 @@ status: current
         <td>May 5, 2026</td>
         <td><strong>Diogo Pinhel</strong></td>
         <td>Aligned with SRS v1.3: IUC numbering updated to hierarchical scheme (IUC-M1-XX-XX); MOD-M1-03 renamed to Exercise Controller; all API endpoint references removed from traceability matrix per professor feedback; "session" → "exercise" terminology applied throughout; Open Items updated (OI-02 resolved via S2 Total System Design, OI-07/OI-08 removed, new OI added)</td>
+        <td><span class="badge badge-dim">Superseded</span></td>
+      </tr>
+      <tr>
+        <td><strong>v1.3</strong></td>
+        <td>May 6, 2026</td>
+        <td><strong>Diogo Pinhel</strong></td>
+        <td>Removed S2 → V2: Format data (parallel) row from Section 3 (External Interface Alignment) — this flow is internal to S2 and outside M1's responsibility; not a conflict but simply not M1's concern. OI-02 reference cleaned accordingly.</td>
         <td><span class="badge badge-green">Published for Review</span></td>
       </tr>
     </tbody>
@@ -311,28 +318,28 @@ M1 sits at the end of the data pipeline and is the only team that interacts with
 </div>
 
 <div class="dfd-container">
-  <img src="{{ '/img/diagrams/external_DFD.svg' | relative_url }}" alt="M1 Data Flow Diagram — Level 0" style="width:100%; border-radius:8px;" />
+  <img src="{{ '/img/diagrams/external_DFD.png' | relative_url }}" alt="M1 Data Flow Diagram — Level 0" style="width:100%; border-radius:8px;" />
   <div style="margin-top:0.75rem; font-size:0.72rem; color:var(--text-xs); letter-spacing:0.04em;">
     Figure 1 — M1 AppFrontend · Level 0 System DFD · April 2026
   </div>
 </div>
 
 <div style="text-align:center; margin: 0.75rem 0 1.5rem;">
-  <a class="download-btn" href="{{ '/img/diagrams/external_DFD.svg' | relative_url }}" download="external_DFD.svg">
+  <a class="download-btn" href="{{ '/img/diagrams/external_DFD.png' | relative_url }}" download="external_DFD.png">
     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
     Download Level 0 Diagram
   </a>
 </div>
 
 <div class="dfd-container">
-  <img src="{{ '/img/diagrams/m1_internal_DFD_v1.1.svg' | relative_url }}" alt="M1 Data Flow Diagram — Level 1" style="width:100%; border-radius:8px;" />
+  <img src="{{ '/img/diagrams/m1_internal_DFD_v1.1.png' | relative_url }}" alt="M1 Data Flow Diagram — Level 1" style="width:100%; border-radius:8px;" />
   <div style="margin-top:0.75rem; font-size:0.72rem; color:var(--text-xs); letter-spacing:0.04em;">
     Figure 2 — M1 AppFrontend · Level 1 Internal DFD · April 2026
   </div>
 </div>
 
 <div style="text-align:center; margin: 0.75rem 0 1.5rem;">
-  <a class="download-btn" href="{{ '/img/diagrams/m1_internal_DFD_v1.1.svg' | relative_url }}" download="m1_internal_DFD_v1.1.svg">
+  <a class="download-btn" href="{{ '/img/diagrams/m1_internal_DFD_v1.1.png' | relative_url }}" download="m1_internal_DFD.png">
     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
     Download Level 1 Diagram
   </a>
@@ -429,12 +436,6 @@ The arrows between modules inside the Level 1 DFD correspond to the following in
         <td><code>IF-S2-M1</code></td>
         <td>MOD-M1-04</td>
         <td><span class="badge badge-green">Aligned</span></td>
-      </tr>
-      <tr>
-        <td>S2 → V2: <em>Format data</em> (parallel)</td>
-        <td>Not M1's responsibility</td>
-        <td>—</td>
-        <td><span class="badge badge-amber">⚠ Conflict — see OI-02</span></td>
       </tr>
       <tr>
         <td>Patient: <em>Body movement</em> via S1</td>
@@ -608,5 +609,5 @@ The arrows between modules inside the Level 1 DFD correspond to the following in
   <span style="color:#34d399; font-weight:700;">M1 — Patient Mobile Application</span> &nbsp;·&nbsp;
   High-Level Design · Part I of II &nbsp;·&nbsp;
   DSD 2025–2026 · UTAD × Jilin University &nbsp;·&nbsp;
-  v1.2 · Published for Review &nbsp;·&nbsp; Owner: <span style="color:#38bdf8;">Diogo Pinhel</span>
+  v1.3 · Published for Review &nbsp;·&nbsp; Owner: <span style="color:#38bdf8;">Diogo Pinhel</span>
 </div>
