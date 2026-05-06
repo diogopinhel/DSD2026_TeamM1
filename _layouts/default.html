@@ -23,56 +23,52 @@
 <body>
     <!-- ════════ NAVBAR ════ -->
     <nav>
+      <div class="nav-inner">
         <div class="nav-logo">DSD2026 · <span>Team M1</span></div>
         <ul class="nav-links">
-            <li><a href="{{ site.baseurl }}/#project">Project</a></li>
-            <li><a href="{{ site.baseurl }}/#architecture">Architecture</a></li>
-            <li><a href="{{ site.baseurl }}/#mission">Mission</a></li>
-            <li><a href="{{ site.baseurl }}/#team">Team</a></li>
-            <li><a href="{{ site.baseurl }}/#responsibilities">Responsibilities</a></li>
-            <li><a href="{{ site.baseurl }}/#workflow">Workflow</a></li>
+            <li><a href="{{ site.baseurl }}/" {% unless page.url contains "team" or page.url contains "news" or page.layout == "post" %}class="active"{% endunless %}>Home</a></li>
+            <li><a href="{{ site.baseurl }}/team.html" {% if page.url contains "team" %}class="active"{% endif %}>Team</a></li>
             <li><a href="{{ site.baseurl }}/news.html" {% if page.layout == "post" or page.url contains "news" %}class="active"{% endif %}>News</a></li>
         </ul>
+      </div>
     </nav>
 
     <!-- ════════ MAIN CONTENT ════ -->
     <main>
         {% if page.layout == "post" or page.title %}
-        <!-- 文章页面 -->
         <section id="post" style="padding-top: 120px; padding-bottom: 96px;">
             <div class="container">
-                <a href="{{ site.baseurl }}/news.html" class="btn-readmore" style="margin-bottom: 2rem; display: inline-flex;">
-                    <i class="fa-solid" style="margin-right: 0.5rem;"></i> Back to News
+                <a href="{{ site.baseurl }}/news.html" class="btn-readmore btn-back" style="margin-bottom: 2rem; display: inline-flex;">
+                    ← Back to News
                 </a>
-                
-                {% assign post_icon = "fa-newspaper" %}
-                {% if page.doc_type == "Weekly Report" %}{% assign post_icon = "fa-chart-bar" %}
-                {% elsif page.doc_type == "Specification" %}{% assign post_icon = "fa-file-code" %}
-                {% elsif page.doc_type == "Requirements" %}{% assign post_icon = "fa-list-check" %}
-                {% elsif page.doc_type == "Design" %}{% assign post_icon = "fa-pen-ruler" %}
-                {% elsif page.doc_type == "Prototype" %}{% assign post_icon = "fa-mobile-screen" %}
-                {% elsif page.doc_type == "Announcement" %}{% assign post_icon = "fa-bullhorn" %}
-                {% endif %}
-                <article class="news-card" style="margin-top: 1rem;">
-                    {% if page.status == "current" %}
-                      <span class="status-badge badge-current">Atual</span>
-                    {% elsif page.status == "outdated" %}
-                      <span class="status-badge badge-outdated">Desatualizado</span>
-                    {% endif %}
-                    <div class="news-card-icon">
-                        <i class="fa-solid {{ post_icon }}"></i>
+
+                <div class="post-page">
+                    <div class="post-meta-row">
+                        {% if page.doc_type %}
+                          {% assign post_icon = "fa-newspaper" %}
+                          {% if page.doc_type == "Weekly Report" %}{% assign post_icon = "fa-chart-bar" %}
+                          {% elsif page.doc_type == "Specification" %}{% assign post_icon = "fa-file-code" %}
+                          {% elsif page.doc_type == "Requirements" %}{% assign post_icon = "fa-list-check" %}
+                          {% elsif page.doc_type == "Design" %}{% assign post_icon = "fa-pen-ruler" %}
+                          {% elsif page.doc_type == "Prototype" %}{% assign post_icon = "fa-mobile-screen" %}
+                          {% elsif page.doc_type == "Announcement" %}{% assign post_icon = "fa-bullhorn" %}
+                          {% endif %}
+                          <span class="doc-type-tag"><i class="fa-solid {{ post_icon }}"></i> {{ page.doc_type }}</span>
+                        {% endif %}
+                        {% if page.status == "current" %}
+                          <span class="status-badge badge-current">Current</span>
+                        {% elsif page.status == "outdated" %}
+                          <span class="status-badge badge-outdated">Outdated</span>
+                        {% endif %}
+                        <span class="post-date-inline"><i class="fa-regular fa-calendar"></i> {{ page.date | date: "%Y-%m-%d · %H:%M" }}</span>
                     </div>
-                    <h1 style="font-size: clamp(1.8rem, 4vw, 2.4rem); margin-bottom: 0.5rem;">{{ page.title }}</h1>
-                    <p class="news-date">
-                        <i class="fa-regular fa-calendar"></i> {{ page.date | date: "%Y-%m-%d" }}
-                    </p>
-                    {% if page.doc_type %}
-                      <span class="doc-type-tag" style="margin-bottom: 2rem; display: inline-flex;"><i class="fa-solid fa-tag"></i> {{ page.doc_type }}</span>
-                    {% endif %}
-                    <div class="post-content" style="line-height: 1.8; color: var(--text); margin-top: 1.5rem;">
+
+                    <h1 class="post-title">{{ page.title }}</h1>
+
+                    <div class="post-content">
                         {{ content }}
                     </div>
-                </article>
+                </div>
             </div>
         </section>
         {% else %}

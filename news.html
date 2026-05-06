@@ -14,24 +14,12 @@ layout: default
 </head>
 <body>
 
-<!-- ════════ NAVBAR ════ -->
-<nav>
-  <div class="nav-logo">DSD2026 · <span>Team M1</span></div>
-  <ul class="nav-links">
-    <li><a href="{{ site.baseurl }}/#project">Project</a></li>
-    <li><a href="{{ site.baseurl }}/#architecture">Architecture</a></li>
-    <li><a href="{{ site.baseurl }}/#mission">Mission</a></li>
-    <li><a href="{{ site.baseurl }}/#team">Team</a></li>
-    <li><a href="{{ site.baseurl }}/#responsibilities">Responsibilities</a></li>
-    <li><a href="{{ site.baseurl }}/#workflow">Workflow</a></li>
-    <li><a href="{{ site.baseurl }}/#news" class="active">News</a></li>
-  </ul>
-</nav>
 
-<!-- ════════ NEWS SECTION (保持原有功能不变) ════════ -->
+<!-- ════════ NEWS SECTION ════════ -->
 <section id="news">
   <div class="container">
-    <!-- Section Header + Filters -->
+
+    <!-- Header + Filters -->
     <div class="news-controls">
       <div class="section-header">
         <p class="section-label reveal">News</p>
@@ -51,14 +39,14 @@ layout: default
         </select>
         <select class="filter-select" id="filter-status" aria-label="Filter by status">
           <option value="">All Status</option>
-          <option value="current">Atual</option>
-          <option value="outdated">Desatualizado</option>
+          <option value="current">Current</option>
+          <option value="outdated">Outdated</option>
         </select>
       </div>
     </div>
 
-    <!-- News Cards Grid -->
-    <div class="news-grid" id="news-grid">
+    <!-- Horizontal News List -->
+    <div class="news-list-h" id="news-grid">
       {% for post in site.posts %}
         {% assign card_icon = "fa-newspaper" %}
         {% if post.doc_type == "Weekly Report" %}{% assign card_icon = "fa-chart-bar" %}
@@ -68,54 +56,33 @@ layout: default
         {% elsif post.doc_type == "Prototype" %}{% assign card_icon = "fa-mobile-screen" %}
         {% elsif post.doc_type == "Announcement" %}{% assign card_icon = "fa-bullhorn" %}
         {% endif %}
-        <article class="news-card reveal"
+        <a class="news-item-h reveal"
+          href="{{ post.url | prepend: site.baseurl }}"
           data-type="{{ post.doc_type }}"
           data-status="{{ post.status }}">
-          <!-- Status badge -->
-          {% if post.status == "current" %}
-            <span class="status-badge badge-current">Atual</span>
-          {% elsif post.status == "outdated" %}
-            <span class="status-badge badge-outdated">Desatualizado</span>
-          {% endif %}
-          <!-- Card Icon -->
-          <div class="news-card-icon">
-            <i class="fa-solid {{ card_icon }}"></i>
+          <div class="nih-left">
+            {% if post.doc_type %}
+              <span class="doc-type-tag"><i class="fa-solid {{ card_icon }}"></i> {{ post.doc_type }}</span>
+            {% endif %}
+            {% if post.status == "current" %}
+              <span class="status-badge badge-current">Current</span>
+            {% elsif post.status == "outdated" %}
+              <span class="status-badge badge-outdated">Outdated</span>
+            {% endif %}
+            <p class="news-date"><i class="fa-regular fa-calendar"></i> {{ post.date | date: "%Y-%m-%d %H:%M" }}</p>
           </div>
-          <!-- Title -->
-          <h3>{{ post.title }}</h3>
-          <!-- Date + Doc Type -->
-          <p class="news-date"><i class="fa-regular fa-calendar"></i> {{ post.date | date: "%Y-%m-%d %H:%M" }}</p>
-          {% if post.doc_type %}
-            <span class="doc-type-tag"><i class="fa-solid fa-tag"></i> {{ post.doc_type }}</span>
-          {% endif %}
-          <!-- Excerpt -->
-          <p class="news-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-          <!-- Link -->
-          <a href="{{ post.url | prepend: site.baseurl }}" class="btn-readmore">Read Full News</a>
-        </article>
+          <div class="nih-right">
+            <h3>{{ post.title }}</h3>
+            <p class="news-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+            <span class="nih-readmore">Read More <span class="nih-arrow">→</span></span>
+          </div>
+        </a>
       {% endfor %}
     </div>
 
-    <script>
-    (function () {
-      var typeSelect = document.getElementById('filter-type');
-      var statusSelect = document.getElementById('filter-status');
-      var cards = document.querySelectorAll('#news-grid .news-card');
-      function applyFilters() {
-        var typeVal = typeSelect.value;
-        var statusVal = statusSelect.value;
-        cards.forEach(function (card) {
-          var typeMatch = !typeVal || card.dataset.type === typeVal;
-          var statusMatch = !statusVal || card.dataset.status === statusVal;
-          card.style.display = (typeMatch && statusMatch) ? '' : 'none';
-        });
-      }
-      typeSelect.addEventListener('change', applyFilters);
-      statusSelect.addEventListener('change', applyFilters);
-    })();
-    </script>
   </div>
 </section>
+
 <!-- ════════ SCROLL PROGRESS BUTTON ════════════════ -->
 <button id="scroll-btn" aria-label="Back to top">
   <svg viewBox="0 0 44 44" width="44" height="44" xmlns="http://www.w3.org/2000/svg">
@@ -126,5 +93,23 @@ layout: default
   </svg>
 </button>
 <script src="{{ site.baseurl }}/transitions.js"></script>
+<script>
+(function () {
+  var typeSelect = document.getElementById('filter-type');
+  var statusSelect = document.getElementById('filter-status');
+  var items = document.querySelectorAll('#news-grid .news-item-h');
+  function applyFilters() {
+    var typeVal = typeSelect.value;
+    var statusVal = statusSelect.value;
+    items.forEach(function (item) {
+      var typeMatch = !typeVal || item.dataset.type === typeVal;
+      var statusMatch = !statusVal || item.dataset.status === statusVal;
+      item.style.display = (typeMatch && statusMatch) ? '' : 'none';
+    });
+  }
+  typeSelect.addEventListener('change', applyFilters);
+  statusSelect.addEventListener('change', applyFilters);
+})();
+</script>
 </body>
 </html>

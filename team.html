@@ -1,0 +1,76 @@
+---
+layout: default
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team · DSD2026 · Team M1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="{{ site.baseurl }}/style.css" />
+</head>
+<body>
+
+
+<!-- ════════ TEAM SECTION ════════ -->
+<section id="team" style="padding-top: 120px;">
+  <div class="container">
+    <p class="section-label reveal">Team &amp; Structure</p>
+    <h2 class="reveal">The People Behind M1</h2>
+
+    <div class="team-grid" style="margin-top: 2.5rem;">
+      <div class="member-card reveal reveal-d1">
+        <div class="member-avatar">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        </div>
+        <div class="member-nat">PT</div>
+        <div class="member-name">Diogo Pinhel</div>
+        <div class="member-role">Team Lead / Software Architect</div>
+        <div class="member-desc">Leads team coordination, sprint planning, and owns the app architecture. Manages the IF2 API contract with the Server team and acts as primary contact for the Steering Committee.</div>
+      </div>
+      <div class="member-card reveal reveal-d2">
+        <div class="member-avatar">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        </div>
+        <div class="member-nat">CN</div>
+        <div class="member-name">Yiding Wang</div>
+        <div class="member-role">Vice Team Lead</div>
+        <div class="member-desc">Supports cross-timezone leadership, coordinates the Chinese side, and bridges communication between institutions.</div>
+      </div>
+      <div class="member-card reveal reveal-d3">
+        <div class="member-avatar">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        </div>
+        <div class="member-nat">PT</div>
+        <div class="member-name">Sara Costa</div>
+        <div class="member-role">Programmer / Tester</div>
+        <div class="member-desc">Develops mobile features and performs cross-testing to ensure quality across the application.</div>
+      </div>
+      <div class="member-card reveal reveal-d4">
+        <div class="member-avatar">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        </div>
+        <div class="member-nat">CN</div>
+        <div class="member-name">Enhe Zhang</div>
+        <div class="member-role">Programmer / Tester</div>
+        <div class="member-desc">Develops mobile features and performs cross-testing to ensure quality across the application.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ SCROLL PROGRESS BUTTON ════════════════ -->
+<button id="scroll-btn" aria-label="Back to top">
+  <svg viewBox="0 0 44 44" width="44" height="44" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="22" cy="22" r="20" class="sbg"/>
+    <circle cx="22" cy="22" r="19" class="strack"/>
+    <circle cx="22" cy="22" r="19" class="sring" id="sring"/>
+    <polyline points="15,25 22,17 29,25" class="sarrow"/>
+  </svg>
+</button>
+<script src="{{ site.baseurl }}/transitions.js"></script>
+</body>
+</html>

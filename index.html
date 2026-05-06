@@ -14,19 +14,6 @@ layout: default
 </head>
 <body>
 
-<!-- ════════ NAVBAR ════ -->
-<nav>
-  <div class="nav-logo">DSD2026 · <span>Team M1</span></div>
-  <ul class="nav-links">
-    <li><a href="#project" class="active">Project</a></li>
-    <li><a href="#architecture">Architecture</a></li>
-    <li><a href="#mission">Mission</a></li>
-    <li><a href="#team">Team</a></li>
-    <li><a href="#responsibilities">Responsibilities</a></li>
-    <li><a href="#workflow">Workflow</a></li>
-    <li><a href="#news">News</a></li>
-  </ul>
-</nav>
 
 <!-- ════════ HERO ════════ -->
 <section id="hero">
@@ -232,53 +219,6 @@ layout: default
   </div>
 </section>
 
-<!-- ════════ 4. TEAM & STRUCTURE ════════════════════════════ -->
-<section id="team">
-  <div class="container">
-    <p class="section-label reveal">Team &amp; Structure</p>
-    <h2 class="reveal">The People Behind M1</h2>
-
-    <div class="team-grid">
-      <div class="member-card reveal reveal-d1">
-        <div class="member-avatar">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-        </div>
-        <div class="member-nat">PT</div>
-        <div class="member-name">Diogo Pinhel</div>
-        <div class="member-role">Team Lead / Software Architect</div>
-        <div class="member-desc">Leads team coordination, sprint planning, and owns the app architecture. Manages the IF2 API contract with the Server team and acts as primary contact for the Steering Committee.</div>
-      </div>
-      <div class="member-card reveal reveal-d2">
-        <div class="member-avatar">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-        </div>
-        <div class="member-nat">CN</div>
-        <div class="member-name">Yiding Wang</div>
-        <div class="member-role">Vice Team Lead</div>
-        <div class="member-desc">Supports cross-timezone leadership, coordinates the Chinese side, and bridges communication between institutions.</div>
-      </div>
-      <div class="member-card reveal reveal-d3">
-        <div class="member-avatar">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-        </div>
-        <div class="member-nat">PT</div>
-        <div class="member-name">Sara Costa</div>
-        <div class="member-role">Programmer / Tester</div>
-        <div class="member-desc">Develops mobile features and performs cross-testing to ensure quality across the application.</div>
-      </div>
-      <div class="member-card reveal reveal-d4">
-        <div class="member-avatar">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-        </div>
-        <div class="member-nat">CN</div>
-        <div class="member-name">Enhe Zhang</div>
-        <div class="member-role">Programmer / Tester</div>
-        <div class="member-desc">Develops mobile features and performs cross-testing to ensure quality across the application.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ════════ 5. RESPONSIBILITIES ════════════════════════════ -->
 <section id="responsibilities">
   <div class="container">
@@ -385,44 +325,6 @@ layout: default
           <li class="reveal">Shared documentation and meeting minutes</li>
         </ul>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ════════ NEWS SECTION (Identical to news.html) ════════ -->
-<section id="news">
-  <div class="container">
-    <!-- Section Header -->
-    <div class="section-header">
-      <p class="section-label reveal">News</p>
-      <h2 class="reveal">Updates & Announcements<br>
-        <em class="quote-em">Latest news from Team M1</em>
-      </h2>
-    </div>
-
-    <!-- News Cards Grid -->
-    <div class="news-grid">
-      {% for post in site.posts limit: 3 %}
-        <article class="news-card reveal">
-          <!-- Card Icon -->
-          <div class="news-card-icon">
-            <i class="fa-solid fa-newspaper"></i>
-          </div>
-          <!-- Title -->
-          <h3>{{ post.title }}</h3>
-          <!-- Date -->
-          <p class="news-date"><i class="fa-regular fa-calendar"></i> {{ post.date | date: "%Y-%m-%d" }}</p>
-          <!-- Excerpt -->
-          <p class="news-excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
-          <!-- Link -->
-          <a href="{{ post.url | prepend: site.baseurl }}" class="btn-readmore">Read Full News</a>
-        </article>
-      {% endfor %}
-    </div>
-    
-    <!-- View All Button (Optional) -->
-    <div style="text-align: center; margin-top: 3rem;">
-      <a href="{{ site.baseurl }}/news.html" class="btn-readmore" style="font-size: 1.1rem;">View All News</a>
     </div>
   </div>
 </section>
