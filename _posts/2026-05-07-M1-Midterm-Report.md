@@ -220,7 +220,7 @@ status: current
 <!-- DOCUMENT HEADER -->
 <div class="hld-header">
   <div class="hld-header-tag">Report</div>
-  <h1>High-Level Design<br><span>M1-Midterm-Report</span></h1>
+  <h1>M1-Midterm-Report<br><span></span></h1>
   <div class="hld-header-meta">
     <span class="meta-chip"><strong>Project:</strong> Limb Motion Recognition and Assistant</span>
     <span class="meta-chip"><strong>Team:</strong> M1 — Patient Mobile App</span>
