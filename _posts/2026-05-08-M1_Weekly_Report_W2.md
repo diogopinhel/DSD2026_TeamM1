@@ -230,14 +230,14 @@ Project: Rehabilitation Exercise Monitoring System
 
 | ID | Task Name | Description | Owner | Status | Link |
 |:---:|:---|:---|:---|:---|:---|
-| 1 | Improve M1 System Design Doc | Further refine the high-level design: clarify data transmission between modules and module-level SRS. | Diogo Pinhel | <span class="status-badge status-done">Completed</span> | [M1-High-Level-Design](https://diogopinhel.github.io/DSD2026_TeamM1/2026/05/04/M1-High-Level-Design.html) |
+| 1 | Improve M1 System Design Doc | Further refine the high-level design: clarify data transmission between modules and module-level SRS. | Diogo Pinhel | <span class="status-badge status-done">Completed</span> | [M1-High-Level-Design](https://diogopinhel.github.io/DSD2026_TeamM1/2026/05/05/M1-High-Level-Design-V1.2.html) |
 | 2 | Update Team Website | Update and upgrade the M1 team website with latest deliverables. | Diogo Pinhel | <span class="status-badge status-done">Completed</span> | [Team Website](https://diogopinhel.github.io/DSD2026_TeamM1/) |
-| 3 | Prepare & Present Mid-Term PPT | Create mid-term presentation slides and present as the person in charge. | Diogo Pinhel | <span class="status-badge status-done">Completed</span> [Mid-Term PPT](https://diogopinhel.github.io/DSD2026_TeamM1/2026/05/05/Mid-Term-Presentation.html) |
-| 4 | Optimize Prototype Pages | Optimize and refine the application prototype pages. | Diogo Pinhel | <span class="status-badge status-done">Completed</span> | See Task 8 |
-| 5 | Update Interface Specification | Update M1 interface specification documentation. | Costa-Sara | <span class="status-badge status-done">Completed</span> | [M1 Interface Spec v2](https://diogopinhel.github.io/DSD2026_TeamM1/2026/05/04/M1_Interface_Specification_v2.html) |
+| 3 | Prepare & Present Mid-Term PPT | Create mid-term presentation slides and present as the person in charge. | Diogo Pinhel | <span class="status-badge status-done">Completed</span> [Mid-Term PPT](https://diogopinhel.github.io/DSD2026_TeamM1/2026/05/07/M1-Midterm-Report.html) |
+| 4 | Optimize Prototype Pages | Optimize and refine the application prototype pages. | Diogo Pinhel | <span class="status-badge status-done">Completed</span> | N/A |
+| 5 | Update Interface Specification | Update M1 interface specification documentation. | Costa-Sara | <span class="status-badge status-done">Completed</span> | [M1_Interface_Specification](https://diogopinhel.github.io/DSD2026_TeamM1/2026/05/05/M1_Interface_Specification.html) |
 | 6 | Reach Consensus with V2 | Coordinate with V2 group and reach agreement on interface specifications. | Costa-Sara | <span class="status-badge status-done">Completed</span> | N/A |
-| 7 | Complete Exercise Page Group | Develop sensor connection, real-time exercise feedback, and exercise end feedback pages. | Enhe Zhang | <span class="status-badge status-done">Completed</span> | [Prototype Intro](https://tnxmy.github.io/DSD2026_TeamM1/2026/05/05/M1_APP_Prototype_Update.html) |
-| 8 | Collect & Integrate SRS | Integrate six-group SRS documents and draw use-case diagram. | Wang Yiding | <span class="status-badge status-done">Completed</span> | [Six-Group SRS v1.0](https://diogopinhel.github.io/DSD2026_TeamM1/2026/05/05/Six-Group_SRS_v1.0.html) · [Use-Case Diagram](https://diogopinhel.github.io/DSD2026_TeamM1/2026/05/04/M1_Use_Case_Diagram.html) |
+| 7 | Complete Exercise Page Group | Develop sensor connection, real-time exercise feedback, and exercise end feedback pages. | Enhe Zhang | <span class="status-badge status-done">Completed</span> | N/A |
+| 8 | Collect & Integrate SRS | Integrate six-group SRS documents and draw use-case diagram. | Wang Yiding | <span class="status-badge status-done">Completed</span> | [Six-Group SRS v1.0](https://diogopinhel.github.io/DSD2026_TeamM1/2026/05/07/ALL_SRS_v0.3.html) · [Use-Case Diagram](https://diogopinhel.github.io/DSD2026_TeamM1/2026/05/07/ALL_SRS_v0.3.html#4-internal-use-case-diagram) |
 | 9 | Fix Prototype Bugs | Fix duplicate buttons and page navigation logic errors in the prototype. | Wang Yiding | <span class="status-badge status-done">Completed</span> | See Prototype Update |
 
 ---
@@ -299,4 +299,4 @@ Several bugs in the application prototype have been fixed:
 ---
 
 *Report compiled according to Weekly Report Rules v0.1.*
-*Submission Date: May 6, 2026*
+*Submission Date: May 8, 2026*
