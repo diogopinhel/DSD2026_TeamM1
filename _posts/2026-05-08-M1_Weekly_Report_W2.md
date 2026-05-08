@@ -208,13 +208,17 @@ status: current
 
 <div class="meta-box">
 
-Week: 2 (April 30 – May 7, 2026)
+Week: 2 (April 30 – May 7, 2026)  
 
-Report Owner: Wang Yiding
 
-Team: M1 (APP Frontend)
+Report Owner: Wang Yiding  
 
-Project: Rehabilitation Exercise Monitoring System
+
+Team: M1 (APP Frontend)  
+
+
+Project: Rehabilitation Exercise Monitoring System  
+
 
 </div>
 
@@ -232,7 +236,7 @@ Project: Rehabilitation Exercise Monitoring System
 |:---:|:---|:---|:---|:---|:---|
 | 1 | Improve M1 System Design Doc | Further refine the high-level design: clarify data transmission between modules and module-level SRS. | Diogo Pinhel | <span class="status-badge status-done">Completed</span> | [M1-High-Level-Design](https://diogopinhel.github.io/DSD2026_TeamM1/2026/05/05/M1-High-Level-Design-V1.2.html) |
 | 2 | Update Team Website | Update and upgrade the M1 team website with latest deliverables. | Diogo Pinhel | <span class="status-badge status-done">Completed</span> | [Team Website](https://diogopinhel.github.io/DSD2026_TeamM1/) |
-| 3 | Prepare & Present Mid-Term PPT | Create mid-term presentation slides and present as the person in charge. | Diogo Pinhel | <span class="status-badge status-done">Completed</span> [Mid-Term PPT](https://diogopinhel.github.io/DSD2026_TeamM1/2026/05/07/M1-Midterm-Report.html) |
+| 3 | Prepare & Present Mid-Term PPT | Create mid-term presentation slides and present as the person in charge. | Diogo Pinhel | <span class="status-badge status-done">Completed</span>| [Mid-Term PPT](https://diogopinhel.github.io/DSD2026_TeamM1/2026/05/07/M1-Midterm-Report.html) |
 | 4 | Optimize Prototype Pages | Optimize and refine the application prototype pages. | Diogo Pinhel | <span class="status-badge status-done">Completed</span> | N/A |
 | 5 | Update Interface Specification | Update M1 interface specification documentation. | Costa-Sara | <span class="status-badge status-done">Completed</span> | [M1_Interface_Specification](https://diogopinhel.github.io/DSD2026_TeamM1/2026/05/05/M1_Interface_Specification.html) |
 | 6 | Reach Consensus with V2 | Coordinate with V2 group and reach agreement on interface specifications. | Costa-Sara | <span class="status-badge status-done">Completed</span> | N/A |
