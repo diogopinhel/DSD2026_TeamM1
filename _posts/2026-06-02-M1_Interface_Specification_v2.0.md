@@ -1168,7 +1168,7 @@ Used for S2 communication when running on the same device.
 | Apr 25, 2026 | Enhe Zhang | Separated IF-M1-S2 and IF-S2-M1; fixed interface count | Draft |
 | Apr 25, 2026 | Enhe Zhang | Split V2 communication into 2.1 IF-V2-M1 (input) and 2.2 IF-M1-V2 (output); now 7 interfaces total | Draft |
 | May 5, 2026  | Sara Costa | Updated to match Total Interface Specification v1.0: replaced POST /users with POST /auth/register; added POST /auth/login; updated measurement format (targetAngles/sensorData/errors); added schedule interface (2.8); corrected S2 patientId->userId; updated SessionSummary timestamps to ISO 8601; updated base URL; updated Measurement type (target_angles/errors/sensor_data); corrected SessionContext types (sessionId/userId to number) | Draft — Pending V2 Review |
-| May 27, 2026 | Yiding Wang | Integrated doctor binding and schedule enhancement: added doctor_id to User and register/login responses; added GET /auth/me (2.1.4); added PATCH /users/:id (2.2.7); added PATCH /schedule/:id (2.2.8); added video_url to Schedule responses (2.8.1); added Schedule type definition (3.1); updated Interface Summary to reflect new data flows | Draft — Pending V2 Review |
+| June 2, 2026 | Yiding Wang | Integrated doctor binding and schedule enhancement: added doctor_id to User and register/login responses; added GET /auth/me (2.1.4); added PATCH /users/:id (2.2.7); added PATCH /schedule/:id (2.2.8); added video_url to Schedule responses (2.8.1); added Schedule type definition (3.1); updated Interface Summary to reflect new data flows | Draft — Pending V2 Review |
 
 ---
 
