@@ -4,7 +4,7 @@ title: "M1 Interface Specification"
 date: 2026-05-05 14:00:00
 excerpt: "This document defines the interface specifications for all data exchanges that cross the M1 module boundary."
 doc_type: Specification
-status: current
+status: outdated
 ---
 
 
