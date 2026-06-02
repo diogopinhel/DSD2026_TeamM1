@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "M1 Interface Specification 2.0"
-date: 2026-05-27 14:00:00
+date: 2026-06-02 14:00:00
 excerpt: "This document defines the interface specifications for all data exchanges that cross the M1 module boundary — Version 2.0. Integrates doctor binding and schedule enhancement endpoints."
 doc_type: Specification
 status: current
