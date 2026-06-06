@@ -1114,7 +1114,7 @@ interface ErrorEvent {
 
 Used for all V2 Backend communication.
 
-**Base URL:** `https://dsd2026-teamv2-production.up.railway.app`
+**Base URL:** `http://113.44.220.94:3000/`
 
 **Headers:**
 ```
