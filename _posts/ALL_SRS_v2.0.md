@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Software Requirements Analysis —— Limb Motion Recognition and Assistant_v2.0"
-date: 2026-06-08 3:00:00
+date: 2026-06-08 1:00:00
 excerpt: "Integrated version of software requirement analysis v2.0."
 doc_type: Requirements
 status: current
