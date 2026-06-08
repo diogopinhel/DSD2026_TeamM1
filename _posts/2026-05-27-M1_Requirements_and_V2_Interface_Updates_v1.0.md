@@ -379,7 +379,7 @@ status: current
 | :--- | :--- | :--- |
 | 4 | videoUrl is null or empty | M1 hides video player, shows "Video not available" placeholder |
 | 4 | Network error loading video | M1 shows "Unable to load video. Check connection." |
-| 5 | status == "completed" | Button shows "已完成" and is disabled |
+| 5 | status == "completed" | Button shows "completed" and is disabled |
 
 ---
 
@@ -390,8 +390,8 @@ status: current
 | **Reference** | IUC-M1-08 |
 | **Actors** | Patient, M1, V2 |
 | **Goal** | Patient confirms plan completion and updates server status |
-| **Summary** | Patient taps completion button on schedule detail; M1 shows AlertDialog for confirmation; upon confirmation, M1 sends PATCH /schedule/:id with status "completed"; V2 updates record; M1 disables button and shows "已完成" |
-| **Trigger** | Patient taps "完成" button |
+| **Summary** | Patient taps completion button on schedule detail; M1 shows AlertDialog for confirmation; upon confirmation, M1 sends PATCH /schedule/:id with status "completed"; V2 updates record; M1 disables button and shows "completed" |
+| **Trigger** | Patient taps "complete" button |
 | **Precondition** | Schedule detail page open; current status != "completed"; Network available |
 | **Postconditions** | V2 schedule status set to "completed"; UI button disabled and relabeled |
 
@@ -399,13 +399,13 @@ status: current
 
 | Step | Patient | M1 | V2 |
 | :--- | :--- | :--- | :--- |
-| 1 | Taps "完成" button | | |
+| 1 | Taps "complete" button | | |
 | 2 | | Shows AlertDialog: "Confirm completion?" | |
 | 3 | Taps "Confirm" | | |
 | 4 | | Sends `PATCH /schedule/:id` {status: "completed"} | |
 | 5 | | | Updates status |
 | 6 | | Receives 200 OK | |
-| 7 | | Disables button, changes text to "已完成" | |
+| 7 | | Disables button, changes text to "completed" | |
 
 **Alternative Flow** (Optional)
 
