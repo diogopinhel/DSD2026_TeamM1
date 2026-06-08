@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Software Requirements Analysis —— Limb Motion Recognition and Assistant_v2.0"
-date: 2026-06-08 13:00:00
+date: 2026-06-08 5:00:00
 excerpt: "Integrated version of software requirement analysis v2.0."
 doc_type: Requirements
 status: current
@@ -384,7 +384,7 @@ status: current
 
 | Date | Author | Description |
 | :--- | :--- | :--- |
-| Jun 8, 2026 | Integration Team | Preliminary integration of Phase II requirements analysis documents from all six teams (M1, M2, S1, S2, V1, V2). |
+| Jun 8, 2026 | WangYiding | Preliminary integration of Phase II requirements analysis documents from all six teams (M1, M2, S1, S2, V1, V2). |
 
 ### 2. Scope
 
