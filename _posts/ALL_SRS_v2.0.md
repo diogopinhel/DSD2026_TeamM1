@@ -1,11 +1,12 @@
 ---
 layout: post
 title: "Software Requirements Analysis —— Limb Motion Recognition and Assistant_v2.0"
-date: 2026-06-08 1:00:00
+date: 2026-06-07 12:00:00
 excerpt: "Integrated version of software requirement analysis v2.0."
 doc_type: Requirements
 status: current
 ---
+
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
